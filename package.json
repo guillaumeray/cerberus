@@ -1,0 +1,25 @@
+{
+  "name": "tests-codeceptjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">14.0.0"
+  },
+  "author": "GR",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "codecept3-upgrade": "^1.0.5",
+    "codeceptjs": "3.1.2",
+    "codeceptjs-assert": "0.0.2",
+    "mocha-junit-reporter": "^2.0.2",
+    "mocha-multi": "^1.1.6",
+    "moment": "^2.26.0",
+    "webdriverio": "^6"
+  },
+  "devDependencies": {
+    "@wdio/selenium-standalone-service": "^5.16.1",
+    "dotenv": "^4.0.0"
+  }
+}

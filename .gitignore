@@ -1,0 +1,11 @@
+
+!*.gitkeep/
+# vs code
+.idea
+.vscode
+.DS_Store
+# framework
+node_modules
+output/
+download
+
