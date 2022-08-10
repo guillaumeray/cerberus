@@ -1,6 +1,5 @@
 ## Cerberus
 ![](https://cdn-icons-png.flaticon.com/128/1430/1430151.png)
-
 ----------
 
 #### Before installation
