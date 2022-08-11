@@ -31,7 +31,7 @@ By default codeptJS run the test on your chrome browser and manage selenium and 
 - java jdk
 - latest chrome version (version > 103)
 
-Howerver if you don't want to run selenium on your computer, you can easily use selenium instead. (See below run test in docker)
+Howerver if you don't want to run selenium on your computer, you can easily use selenium docker instead. (See below run test in docker)
 
 ####  Run test in docker
 ----------
@@ -74,8 +74,8 @@ The heart of codeceptJS is **helper**, it's the place where we add the global lo
 ----------
 
 Test result are printed in the console by default, but we can configure other reporting tool in codeceptJS conf.
->Default report files are stored in output folder
->Each time a test fail, a screenshot is saved in 'output' directory
+>Default report files are stored in output folder.
+- Each time a test fail, a screenshot is saved in 'output' directory
 
 ```bash
 ./node_modules/.bin/codeceptjs run --reporter mocha-junit-reporter
