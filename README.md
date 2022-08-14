@@ -89,4 +89,3 @@ Based on cucumber best practice, the framework use gherkin file to write test. W
 - All gherkin files are in 'features' directory
 - All steps files are in 'steps' directory
 - All pages files are in 'pages' directory
-
