@@ -16,10 +16,11 @@
     "mocha-junit-reporter": "^2.0.2",
     "mocha-multi": "^1.1.6",
     "moment": "^2.26.0",
+    "playwright": "^1.25.1",
     "webdriverio": "^6"
   },
   "devDependencies": {
-    "@wdio/selenium-standalone-service": "^5.16.1",
+    "@wdio/selenium-standalone-service": "^6",
     "dotenv": "^4.0.0"
   }
 }

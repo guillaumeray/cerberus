@@ -1,24 +1,19 @@
-const { I, homePage, bookingPage } = inject();
+const { I, homePage, catalogPage } = inject();
 
 // general
 
 Given(/^I am on home page$/, async function () {
-    await I.amOnPage('https://www.coinhouse.com/');
+    await I.amOnPage('');
     await homePage.ICheckHomePage();
 });
 
-Given(/^I select menu link "(.*)" and sub menu "(.*)"$/, async function (mainMenu, subMenu) {
-    await homePage.ISelectMenuLink(mainMenu, subMenu);
+Given(/^I select menu link "(.*)"$/, async function (menu) {
+    await homePage.ISelectMenuLink(menu);
 });
 
-Given(/^I accept cookies$/, async function () {
-    await homePage.acceptCookies();
-});
-
-Given(/^I select a private appointment for day "(.*)" time "(.*)"$/, async function (day, time) {
-    await homePage.IClickBookAppointment();
-    await I.switchToNewWindow();
-    await bookingPage.bookAppointment(day, time);
+Given(/^I add product "(.*)" to cart$/, async function (product) {
+    await catalogPage.IAddProductToCart(product);
+    await catalogPage.goCheckOut();
 });
 
 Given(/^I fill customer information for appointment$/, async function (table) {
@@ -40,7 +35,6 @@ Given(/^I fill customer information for appointment$/, async function (table) {
         mail = cells[2].value;
         phone = cells[2].value;
     }
-    await bookingPage.fillCustomerInfo(firstName, lastName, mail, phone)
 });
 
 

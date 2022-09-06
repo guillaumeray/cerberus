@@ -5,20 +5,11 @@ exports.config = {
   output: 'output',
   helpers: {
 
-    WebDriver: {
-      url: 'http://automationpractice.com/index.php',
-      browser: 'chrome',
-      smartWait: 20000,
-      windowSize: '1280x800',
-      host: process.env.SELENIUM_HOST,
-      port: parseInt(process.env.SELENIUM_PORT),
-      timeouts: {
-        "script": 10000
-      }
-    },
-
-    MyHelper: {
-      require: './web_helper.js',
+    Playwright: {
+      url: "http://automationpractice.com/index.php",
+      show: true,
+      browser: 'chromium',
+      waitForNavigation: "networkidle0"
     },
 
     AssertWrapper: {
@@ -47,16 +38,6 @@ exports.config = {
       enabled: true,
       retries: 5,
       ignoredSteps: ['wait*']
-    },
-
-    // can not set a specific version of chromedriver to adapt to my local chrome
-    // by default the latest chromedriver is downloaded
-    wdio:{
-      services: ['selenium-standalone'],
-      enabled: true,
-      seleniumArgs: {
-        seleniumArgs: ["-port", "4444"],
-      },
     },
 
   },
