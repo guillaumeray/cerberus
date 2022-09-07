@@ -6,7 +6,7 @@ exports.config = {
   helpers: {
 
     Playwright: {
-      url: "http://automationpractice.com/index.php",
+      url: "https://www.swan.io",
       show: true,
       browser: 'chromium',
       waitForNavigation: "networkidle0"
@@ -28,8 +28,6 @@ exports.config = {
 
   include: {
     homePage: './pages/test/homePage.js',
-    catalogPage: './pages/test/catalogPage.js',
-    orderPage: './pages/test/orderPage.js',
   },
 
   plugins: {

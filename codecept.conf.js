@@ -6,7 +6,7 @@ exports.config = {
   helpers: {
 
     WebDriver: {
-      url: 'http://automationpractice.com/index.php',
+      url: 'https://www.swan.io',
       browser: 'chrome',
       smartWait: 20000,
       windowSize: '1280x800',
@@ -37,8 +37,6 @@ exports.config = {
 
   include: {
     homePage: './pages/test/homePage.js',
-    catalogPage: './pages/test/catalogPage.js',
-    orderPage: './pages/test/orderPage.js',
   },
 
   plugins: {
