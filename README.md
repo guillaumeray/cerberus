@@ -7,7 +7,7 @@
 ###### You must have installed on your machine :
 - nodeJS version > 14 
 - npm latest version
-- latest chrome browser
+- latest chrome or chromium browser
 
 #### How to run test  ?
 ----------
@@ -27,6 +27,8 @@ npm install
 ```
 The **grep** argument run a test with a specific tag, in the above example @basic
 
+The test in run on chromium browser
+
 ######  Run test with selenium instead of playwright
 ```bash
 ./node_modules/.bin/codeceptjs run --grep @basic --steps
@@ -35,7 +37,6 @@ The **grep** argument run a test with a specific tag, in the above example @basi
 By default codeptJS run the test with selenium but it's not the best solution because you must have some more dependencies such as : 
 
 - java jdk
-- latest chrome version 
 
 Howerver if you don't want to run selenium on your computer, you can easily use selenium docker instead. (See below run test in docker)
 

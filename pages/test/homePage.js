@@ -1,9 +1,6 @@
 const I = actor();
 
 module.exports = {
-
-  // main header
-  mainHeader: "body#index",
   // menu
   linkStart: "//a/div[text()='Start now']",
   linkStartPage: "//a[text()='Start Now']",
@@ -15,10 +12,6 @@ module.exports = {
   websiteInput: "//input[@name='Website-URL']",
   checkbox: "//span[@for='checkbox-2']",
   submit: "//form[@id='wf-form-Start-now-form']/input[@type='submit']",
-
-  async ICheckHomePage() {
-    await I.seeElement({css: this.mainHeader});
-  },
 
   async ISelectMenuLink() {
     await I.waitForElement(this.linkStart, 5);

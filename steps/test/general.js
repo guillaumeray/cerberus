@@ -10,7 +10,6 @@ Given(/^I select menu link start now$/, async function () {
     await homePage.ISelectMenuLink();
 });
 
-
 Given(/^I fill customer information$/, async function (table) {
     let firstName;
     let lastName;
@@ -33,9 +32,7 @@ Given(/^I fill customer information$/, async function (table) {
         company = cells[3].value;
         website = cells[4].value;
     }
-    console.log(firstName, lastName, mail, company, website)
     await homePage.IFillForm(firstName, lastName, mail, company, website) 
-
 });
 
 
