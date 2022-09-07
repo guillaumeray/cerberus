@@ -3,24 +3,21 @@ const { I, homePage, catalogPage } = inject();
 // general
 
 Given(/^I am on home page$/, async function () {
-    await I.amOnPage('');
-    await homePage.ICheckHomePage();
+    await I.amOnPage('/');
 });
 
-Given(/^I select menu link "(.*)"$/, async function (menu) {
-    await homePage.ISelectMenuLink(menu);
+Given(/^I select menu link start now$/, async function () {
+    await homePage.ISelectMenuLink();
 });
 
-Given(/^I add product "(.*)" to cart$/, async function (product) {
-    await catalogPage.IAddProductToCart(product);
-    await catalogPage.goCheckOut();
-});
 
-Given(/^I fill customer information for appointment$/, async function (table) {
+Given(/^I fill customer information$/, async function (table) {
     let firstName;
     let lastName;
     let mail;
-    let phone;
+    let company;
+    let website;
+
     for (const id in table.rows) {
         if (id < 1) {
           continue; // skip a header of a table
@@ -33,8 +30,12 @@ Given(/^I fill customer information for appointment$/, async function (table) {
         firstName = cells[0].value;
         lastName = cells[1].value;
         mail = cells[2].value;
-        phone = cells[2].value;
+        company = cells[3].value;
+        website = cells[4].value;
     }
+    console.log(firstName, lastName, mail, company, website)
+    await homePage.IFillForm(firstName, lastName, mail, company, website) 
+
 });
 
 

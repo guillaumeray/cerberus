@@ -7,33 +7,39 @@
 ###### You must have installed on your machine :
 - nodeJS version > 14 
 - npm latest version
-- latest java jdk
 - latest chrome browser
-- latest docker engine
 
 #### How to run test  ?
 ----------
 
 This test framework is based on **codeceptJS**, to better understand all the project you can read the official documentation on https://codecept.io/
 
+The test can be run with playwright or selenium 
+
 ######  Install dependencies
 ```bash
 npm install
 ```
 
-######  Run specific test
+######  Run specific test with playwright
 ```bash
-./node_modules/.bin/codeceptjs run --grep @basic --steps
+./node_modules/.bin/codeceptjs run -c codecept.conf.playwright.js --grep @basic --steps
 ```
 The **grep** argument run a test with a specific tag, in the above example @basic
 
-By default codeptJS run the test on your chrome browser and manage selenium and chrome driver library. In order to work you need : 
+######  Run test with selenium instead of playwright
+```bash
+./node_modules/.bin/codeceptjs run --grep @basic --steps
+```
+
+By default codeptJS run the test with selenium but it's not the best solution because you must have some more dependencies such as : 
+
 - java jdk
-- latest chrome version (version > 103)
+- latest chrome version 
 
 Howerver if you don't want to run selenium on your computer, you can easily use selenium docker instead. (See below run test in docker)
 
-####  Run test in docker
+####  Run test in docker selenium
 ----------
 
 ```bash

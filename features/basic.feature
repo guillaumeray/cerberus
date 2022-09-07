@@ -1,8 +1,12 @@
-Feature: Basic test
+Feature: Basic test swan
   # FR
 
   @basic
-  Scenario: Add product to cart 
+  Scenario: Fill form start now 
     Given I am on home page
-    And I select menu link "T-shirts"
-    And I add product "1" to cart
+    And I select menu link start now
+    And I fill customer information
+    | firstname         | lastname    | mail               | company  | website |  
+    | Arthur            | fox          | fx@truc.fr        | google    | website.com| 
+    | guillaume          | rayes      | fx@truc.fr         | fb        |website.com | 
+    | tiff               | ray         | fx@truc.fr         | glm      | website.com| 
